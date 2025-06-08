@@ -2,7 +2,7 @@
   "name": "memod.github.io",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://memod.github.io/memod.github.io",
+  "homepage": "https://memod.github.io/memod-homepage",
   "scripts": {
     "dev": "next dev --turbopack",
     "build": "next build",
