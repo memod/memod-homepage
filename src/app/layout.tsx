@@ -12,16 +12,27 @@ const geistMono = Geist_Mono({
 });
 
 
-export default function RootLayout({
-  children,
-}: Readonly<{
+export default function RootLayout({children,}: Readonly<{
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
-        {children}
-      </body>
-    </html>
+      <html lang="en">
+        <head>
+            <!-- Google tag (gtag.js) -->
+            <script async src="https://www.googletagmanager.com/gtag/js?id=G-ZV5R4GG7QS"></script>
+            <script>
+                window.dataLayer = window.dataLayer || [];
+                function gtag() {
+                    window?.dataLayer?.push(arguments);
+                }
+                gtag('js', new Date());
+                gtag('config', 'G-ZV5R4GG7QS');
+            </script>
+            <title>Carlos G. Durazo - Software Engineer</title>
+          </head>
+          <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
+            {children}
+          </body>
+      </html>
   );
 }
